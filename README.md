@@ -1,3 +1,16 @@
+## My Changes
+This is a fork of [pytradfri](https://github.com/ggravlingen/pytradfri).
+
+We still use physical light switches in hour home. In the morning, when we turn the lights on, I do not want them to restore any 'relaxed' setting that we used the night before. Instead, they should be bright so that I can see something. The script in `examples/mytradfri` does this. 
+
+Additionally, I added the following to a script in `/etc/cron.d/tradfri`:
+
+```PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+* * * * * vvdveen /usr/bin/python3 /home/vvdveen/src/pytradfri/examples/mytradfri.py
+```
+
+## Original README
 [![Coverage Status](https://coveralls.io/repos/github/ggravlingen/pytradfri/badge.svg?branch=master)](https://coveralls.io/github/ggravlingen/pytradfri?branch=master)
 [![PyPI version](https://badge.fury.io/py/pytradfri.svg)](https://badge.fury.io/py/pytradfri)
 [![Reviewed by Hound](https://img.shields.io/badge/Reviewed_by-Hound-8E64B0.svg)](https://houndci.com)
